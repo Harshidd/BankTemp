@@ -1,6 +1,20 @@
 import React from 'react';
 
-export default function ValueSection({ reversed = false, title, subtitle, description, highlights }) {
+interface ValueSectionProps {
+  reversed?: boolean;
+  title: string;
+  subtitle: string;
+  description: string;
+  highlights: { title: string; text: string }[];
+}
+
+export default function ValueSection({ 
+  reversed = false, 
+  title, 
+  subtitle, 
+  description, 
+  highlights 
+}: ValueSectionProps) {
   return (
     <section className="py-24 lg:py-48 bg-black/95 overflow-hidden">
       <div className="container mx-auto px-4">

@@ -1,108 +1,73 @@
-# AI Website Cloner Template
+# Template Bank: Professional Starter Systems
 
-A reusable template for reverse-engineering any website and rebuilding it as a pixel-perfect clone using [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+Skip the blank canvas. Start with production-ready website systems engineered for architectural clarity and high-trust conversion logic.
 
-Point it at a URL, run `/clone-website`, and Claude Code will inspect the site via Chrome MCP, extract design tokens and assets, write component specs, and dispatch parallel builder agents to reconstruct every section — all in isolated git worktrees that merge automatically.
+## What This Is
 
-## Demo
+The **Template Bank** is a productized library of high-fidelity, multi-page website foundations. It provides a strategic head-start by offering full 7-page coherent systems—not just hero sections or generic landing pages.
 
-[![Watch the demo](docs/design-references/comparison.png)](https://youtu.be/O669pVZ_qr0)
+### Why It Is Useful
+- **Skip the "Blank Canvas"**: Start with a proven information architecture for specific industries.
+- **Architectural Depth**: Each starter includes pages for Services, Pricing, About, FAQ, and trust-building Credentials.
+- **Production-Ready**: Built with modern best practices using Next.js 16, React 19, and Tailwind CSS v4.
+- **Rapid Adaptation**: Cleanly separated logic and styles allow for sub-millisecond brand adaptation.
 
-> Click the image above to watch the full demo on YouTube.
+## Core Features
 
-## Quick Start
+- **Category-Based Library**: Organized discovery across SaaS, Education, Local Business, Personal Brand, and more.
+- **Direct Preview UX**: A sophisticated browser-based navigation system to experience every foundation before deployment.
+- **7-Page Full Business Engines**: Built-in flows for appointment setting, newsletter capture, and multi-tier pricing.
+- **Curated with Intent**: Every template is hand-vetted for structural logic and visual premiumness.
+- **Future-Ready Foundations**: Modular DNA designed to be extended into full custom applications.
 
-1. **Clone this repo**
-   ```bash
-   git clone https://github.com/JCodesMore/ai-website-cloner-template.git my-clone
-   cd my-clone
-   ```
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-3. **Start Claude Code** with Chrome MCP enabled:
-   ```bash
-   claude --chrome
-   ```
-4. **Run the skill**:
-   ```
-   /clone-website <target-url>
-   ```
-5. **Customize** (optional) — after the base clone is built, modify as needed
+## Category Coverage
 
-> **Tip:** You can optionally edit `TARGET.md` before cloning to specify pages, fidelity level, and scope — but it's not required. The `/clone-website` skill will handle everything from just the URL.
+The bank currently hosts curated collections in several high-impact categories:
 
-## Prerequisites
+- **SaaS & Product Promo**: High-velocity product promotional systems (e.g., *Modern B2B SaaS*, *AI Feature Promo*).
+- **Local Business**: High-trust, expert-led professional services (e.g., *High-Trust Local*, *Clinic Expert*).
+- **Education & STEM**: Academic and skills-based learning platform foundations (e.g., *Modern Interactive Learning*).
+- **Personal Brand**: Authority-building platforms for coaches, experts, and solo founders.
+- **Agency & Studio**: Editorial and aesthetic starters for creative services.
 
-- [Node.js](https://nodejs.org/) 20+
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code)
+## Getting Started
 
-## Tech Stack
+### 1. Installation
+Install the core design system and library dependencies:
+```bash
+npm install
+```
 
-- **Next.js 16** — App Router, React 19, TypeScript strict
-- **shadcn/ui** — Radix primitives + Tailwind CSS v4
-- **Tailwind CSS v4** — oklch design tokens
-- **Lucide React** — default icons (replaced by extracted SVGs during cloning)
+### 2. Launch the Library
+Run the local development server to browse the collection:
+```bash
+npm run dev
+```
 
-## How It Works
-
-The `/clone-website` skill runs a multi-phase pipeline:
-
-1. **Reconnaissance** — screenshots, design token extraction, interaction sweep (scroll, click, hover, responsive)
-2. **Foundation** — updates fonts, colors, globals, downloads all assets
-3. **Component Specs** — writes detailed spec files (`docs/research/components/`) with exact computed CSS values, states, behaviors, and content
-4. **Parallel Build** — dispatches builder agents in git worktrees, one per section/component
-5. **Assembly & QA** — merges worktrees, wires up the page, runs visual diff against the original
-
-Each builder agent receives the full component specification inline — exact `getComputedStyle()` values, interaction models, multi-state content, responsive breakpoints, and asset paths. No guessing.
+### 3. Browse Locally
+Navigate to [http://localhost:3000/templates](http://localhost:3000/templates) to explore the bank and its interactive previews.
 
 ## Project Structure
 
-```
-src/
-  app/              # Next.js routes
-  components/       # React components
-    ui/             # shadcn/ui primitives
-    icons.tsx       # Extracted SVG icons
-  lib/utils.ts      # cn() utility
-  types/            # TypeScript interfaces
-  hooks/            # Custom React hooks
-public/
-  images/           # Downloaded images from target
-  videos/           # Downloaded videos from target
-  seo/              # Favicons, OG images
-docs/
-  research/         # Extraction output & component specs
-  design-references/ # Screenshots
-scripts/            # Asset download scripts
-TARGET.md           # Clone target configuration
-AGENTS.md           # Agent instructions & code style
-```
+- **`template-bank/`**: The core asset library containing the raw starter systems.
+- **`src/app/templates/`**: The live-preview "showcase" routes that bridge the bank to the browser.
+- **`src/lib/template-registry.ts`**: The central source of truth for template metadata, status, and value propositions.
+- **`src/components/`**: Shared UI primitives used across the library interface.
+- **`docs/`**: Technical research and structural notes for each system.
 
-## Commands
+## Product Direction & Vision
 
-```bash
-npm run dev    # Start dev server
-npm run build  # Production build
-npm run lint   # ESLint check
-```
+The Template Bank is evolving from a static collection into a comprehensive **Starter Hub**. The goal is to standardize the "First Mile" of web development by providing the architectural logic that usually takes weeks to define.
 
-## Configuration (Optional)
+### Roadmap
+- [ ] **Catalog Expansion**: Adding specialized templates for E-commerce, Real Estate, and Fintech.
+- [ ] **Customization API**: Tools for rapid brand token injection (colors, typography, spacing).
+- [ ] **Template Variants**: Multiple layout flavors for each category starter.
+- [ ] **Download/Export System**: One-click extraction of a specific starter for standalone projects.
+- [ ] **App-Style Library UX**: Improving the discovery interface with filtering and deep-search.
 
-Edit **`TARGET.md`** before cloning if you want fine-grained control:
+## License & Attribution
 
-- **Pages** — which pages to replicate (default: home page)
-- **Fidelity** — pixel-perfect, high fidelity, or structural
-- **Scope** — what's in/out of scope
-- **Customization plans** — modifications to apply after the base clone
+Designed and curated with architectural intent by **MRKDEV**.
 
-If you skip this, `/clone-website <url>` will default to a pixel-perfect clone of the home page. 
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=JCodesMore/ai-website-cloner-template&type=Date)](https://star-history.com/#JCodesMore/ai-website-cloner-template&Date)
-
-## License
-
-MIT
+MIT License.

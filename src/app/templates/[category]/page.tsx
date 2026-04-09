@@ -8,20 +8,29 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   const category = TEMPLATE_CATEGORIES.find(c => c.id === categoryId);
   const categoryTemplates = TEMPLATES.filter(t => t.category === categoryId);
 
-  if (!category) return <div className="min-h-screen bg-slate-50 p-24 text-center text-slate-500 font-bold">Category not found.</div>;
+  if (!category) return <div className="min-h-screen bg-white p-24 text-center text-slate-500 font-bold">Category not found.</div>;
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-blue-500 selection:text-white">
-      <main className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
-        <Link href="/templates" className="inline-flex items-center gap-2 group mb-12 lg:mb-20 text-slate-400 hover:text-slate-950 transition-colors font-bold uppercase tracking-widest text-xs">
-          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-          Back to Template Bank
-        </Link>
+    <div className="min-h-screen bg-white text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
+      <main className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div className="flex items-center gap-6 mb-12">
+          <Link href="/" className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-indigo-600 transition-colors group">
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            Home
+          </Link>
+          <Link href="/templates" className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-indigo-600 transition-colors group">
+            Template Bank
+          </Link>
+        </div>
 
-        <div className="mb-24 lg:mb-32">
-          <h1 className="text-4xl lg:text-7xl font-extrabold tracking-tight mb-8 uppercase tracking-[0.1em]">{category.name} Templates</h1>
-          <p className="text-lg lg:text-xl text-slate-500 max-w-2xl leading-relaxed">
-            High-quality {category.name} starters optimized for performance, conversion, and rapid customization.
+        <div className="mb-24 lg:mb-32 space-y-6 animate-in fade-in slide-in-from-bottom duration-700">
+          <div className="flex items-center gap-2">
+             <span className="text-xs font-black uppercase tracking-[0.3em] text-indigo-600">Starter Systems</span>
+             <div className="h-px w-8 bg-indigo-100" />
+          </div>
+          <h1 className="text-5xl lg:text-8xl font-black tracking-tight text-slate-950 leading-none">{category.name} <br/>Collections.</h1>
+          <p className="text-lg lg:text-xl text-slate-500 max-w-2xl leading-relaxed font-medium">
+            High-fidelity {category.name} starters engineered for professional performance and rapid foundational customization.
           </p>
         </div>
 
@@ -30,36 +39,36 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           {categoryTemplates.map((template) => (
             <div
               key={template.id}
-              className="group flex flex-col p-8 lg:p-16 rounded-[3.5rem] border border-slate-950/5 bg-white shadow-2xl relative overflow-hidden"
+              className="group flex flex-col p-10 lg:p-16 rounded-[4rem] border border-slate-100 bg-slate-50 shadow-xl shadow-slate-200/50 relative overflow-hidden transition-all duration-500 hover:bg-white hover:shadow-2xl hover:shadow-indigo-900/5"
             >
-              <div className="absolute top-0 right-0 p-8 flex flex-col items-end gap-2">
-                 <div className="px-4 py-2 rounded-full border border-slate-950/10 bg-slate-50 text-[10px] font-bold text-slate-500 uppercase tracking-widest leading-none outline shadow-sm group-hover:bg-blue-50 group-hover:text-blue-600 transition-all">
+              <div className="absolute top-0 right-0 p-10 flex flex-col items-end gap-2 isolate">
+                 <div className="px-4 py-2 rounded-full border border-slate-200 bg-white text-[9px] font-black text-slate-500 uppercase tracking-widest leading-none shadow-sm group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600 transition-all">
                    {template.styleTag}
                  </div>
                  {template.pageCount && template.pageCount > 1 && (
-                   <div className="px-3 py-1.5 rounded-full bg-slate-950 text-white text-[9px] font-bold uppercase tracking-widest shadow-xl">
+                   <div className="px-3 py-1.5 rounded-full bg-slate-900 text-white text-[8px] font-black uppercase tracking-widest shadow-xl">
                      {template.pageCount} Pages
                    </div>
                  )}
               </div>
 
-              <div className="flex-1 space-y-8 mb-12">
+              <div className="flex-1 space-y-10 mb-12 isolate">
                 <div className="space-y-4">
                   {template.status === 'ready' && (
-                    <div className="flex items-center gap-2 text-emerald-500 font-bold text-[10px] uppercase tracking-widest leading-none">
-                      <CheckCircle className="w-3.5 h-3.5" />
-                      Ready for Use
+                    <div className="flex items-center gap-2 text-indigo-600 font-black text-[9px] uppercase tracking-[0.2em] leading-none">
+                      <CheckCircle className="w-4 h-4" />
+                      System Ready
                     </div>
                   )}
-                  <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-950 group-hover:text-blue-600 transition-colors">{template.name}</h2>
+                  <h2 className="text-4xl lg:text-5xl font-black tracking-tight text-slate-950 group-hover:text-indigo-600 transition-colors leading-[1.1]">{template.name}</h2>
                   {template.valueProposition && (
-                    <p className="text-xs font-bold text-blue-600 uppercase tracking-widest border-l-2 border-blue-600/20 pl-4 py-1">
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest italic pr-12">
                       {template.valueProposition}
                     </p>
                   )}
                 </div>
                 
-                <div className="space-y-6">
+                <div className="space-y-8">
                    <p className="text-lg text-slate-500 leading-relaxed font-medium transition-colors group-hover:text-slate-950 line-clamp-3">
                      {template.description}
                    </p>
@@ -67,45 +76,51 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                    {template.useCases && (
                      <div className="flex flex-wrap gap-2 pt-4">
                        {template.useCases.slice(0, 3).map(uc => (
-                         <span key={uc} className="px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-950/5 text-[9px] font-bold text-slate-400 uppercase tracking-widest group-hover:border-blue-600/20 group-hover:text-slate-700 transition-all">
+                         <span key={uc} className="px-3 py-1.5 rounded-xl bg-white border border-slate-100 text-[10px] font-bold text-slate-400 uppercase tracking-widest group-hover:border-indigo-100 group-hover:text-slate-700 transition-all">
                            {uc}
                          </span>
                        ))}
-                       {template.useCases.length > 3 && (
-                         <span className="px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-950/10 text-[9px] font-bold text-slate-400 uppercase tracking-widest">
-                           +{template.useCases.length - 3} More
-                         </span>
-                       )}
                      </div>
                    )}
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 isolate">
                   <Link
                     href={`/templates/${categoryId}/${template.id}`}
-                    className="px-8 py-4 rounded-2xl bg-slate-950 text-white font-bold text-sm tracking-widest uppercase hover:bg-blue-600 shadow-2xl transition-all hover:scale-105 active:scale-95 flex items-center gap-3 group/btn"
+                    className="px-10 py-5 rounded-2xl bg-slate-900 text-white font-bold text-xs tracking-widest uppercase hover:bg-indigo-600 shadow-2xl shadow-indigo-900/10 transition-all hover:scale-105 active:scale-95 flex items-center gap-4 group/btn"
                   >
-                   Preview Template
+                   Preview Starter
                    <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                  </Link>
-                 <button className="p-4 rounded-2xl border border-slate-950/10 bg-slate-50 hover:bg-blue-50 text-slate-400 hover:text-blue-600 transition-all shadow-xl group/info">
+                 <button className="p-5 rounded-2xl border border-slate-200 bg-white hover:bg-indigo-50 text-slate-300 hover:text-indigo-600 transition-all shadow-sm group/info">
                    <Info className="w-6 h-6" />
                  </button>
               </div>
 
-              {/* Decorative Background Accents */}
-              <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-blue-500/5 blur-[100px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity" />
+              {/* Decorative Accent */}
+              <div className="absolute -bottom-12 -right-12 w-64 h-64 bg-indigo-500/5 blur-[100px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
           ))}
 
           {categoryTemplates.length === 0 && (
-             <div className="col-span-2 p-32 rounded-[3.5rem] border border-slate-950/5 bg-slate-50 text-center text-slate-300 font-extrabold uppercase tracking-widest">
-                Coming Soon
+             <div className="col-span-2 p-32 rounded-[4rem] border border-slate-100 bg-slate-50 text-center text-slate-300 font-extrabold uppercase tracking-widest">
+                System in Queue
              </div>
           )}
+        </div>
+
+        {/* Brand Footer */}
+        <div className="mt-32 pt-16 border-t border-slate-100 flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] text-slate-300">
+           <div className="flex items-center gap-4">
+              <span>{category.name} Distribution</span>
+              <div className="w-1 h-1 rounded-full bg-slate-200" />
+              <span>{categoryTemplates.length} Active Starters</span>
+           </div>
+           <span className="text-slate-900 font-black">MRKDEV</span>
         </div>
       </main>
     </div>
   );
 }
+

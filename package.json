@@ -1,6 +1,7 @@
 {
-  "name": "ai-website-clone-template",
+  "name": "template-bank-systems",
   "version": "0.1.0",
+  "description": "Curated library of production-ready website foundations with architectural depth and browser-based previews.",
   "private": true,
   "scripts": {
     "dev": "next dev",

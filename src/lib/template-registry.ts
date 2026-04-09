@@ -265,4 +265,64 @@ export const TEMPLATES: TemplateMetadata[] = [
     showcaseSummary: 'A high-energy 7-page professional engine for the modern creator economy. It converts audience interest into deep engagement through structured digital product paths and vibrant content-first storytelling.',
     catalogReview: 'The definitive starter for modern creators. It perfectly balances approachable, high-energy styling with absolute structural clarity for product-driven brands.',
   },
+  {
+    id: 'ai-feature-promo',
+    name: 'AI Feature Promo',
+    category: 'product-promotion',
+    description: 'A clean, modern, feature-first promotional website starter for AI tools and productivity enhancements. Optimized for premium product storytelling and sub-millisecond conversion.',
+    styleTag: 'Feature-First Editorial',
+    status: 'ready',
+    // Catalog-grade Metadata
+    valueProposition: 'Translating complexity into intelligent product clarity.',
+    pageCount: 7,
+    useCases: [
+      'AI Tools & Assistants',
+      'Workflow Enhancers',
+      'SaaS Feature Launches',
+      'Smart Utility Apps',
+      'Developer Tools',
+      'Productivity Extensions'
+    ],
+    strengths: [
+      '7-Page Multi-Page System',
+      'Feature-First Narrative',
+      'Workflow-Specific Stories',
+      'Interactive Release Timeline',
+      'Clean Editorial DNA',
+      'Turkey-Local Ready'
+    ],
+    mrkdevContext: 'MRKDEV STARTER TEMPLATE',
+    showcaseSummary: 'This 7-page professional engine provides a complete product existence beyond a simple hero page. It handles everything from deep feature breakdowns to interactive release momentum and usage-based accessibility models.',
+    catalogReview: 'A masterclass in single-product promotion. It maintains high visual breathing room while ensuring absolute structural clarity for AI-driven products.',
+  },
+  {
+    id: 'clinic-expert-local',
+    name: 'Clinic Expert Local',
+    category: 'local-business',
+    description: 'A premium, trust-driven multi-page system for specialist clinics and expert practices. Optimized for clinical authority and seamless patient appointment flows.',
+    styleTag: 'Elite Clinical Trust',
+    status: 'ready',
+    // Catalog-grade Metadata
+    valueProposition: 'Establishing specialist authority for high-trust practices.',
+    pageCount: 7,
+    useCases: [
+      'Dental & Eye Clinics',
+      'Therapy & Psychology Hubs',
+      'Specialist Medical Practices',
+      'Aesthetics & Wellness Centers',
+      'Professional Consultant Offices',
+      'Expert-Led Care Groups'
+    ],
+    strengths: [
+      '7-Page Complete Multi-Page System',
+      'Specialist-First Authority DNA',
+      'Departmental Service Grouping',
+      'High-Trust Credentialing Blocks',
+      'Elite Patient Journey Narrative',
+      'Department-Logic Appointment Flow'
+    ],
+    mrkdevContext: 'MRKDEV STARTER TEMPLATE',
+    showcaseSummary: 'This 7-page professional engine converts clinic uncertainty into specialist trust. It handles everything from department-specific service breakdowns and practitioner bio hierarchies to low-friction clinical inquiry protocols.',
+    catalogReview: 'The definitive starter for expert-led local practices. It perfectly balances calm, premium clinical styling with absolute structural authority for specialist health and consultation services.',
+  },
 ];

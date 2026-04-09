@@ -1,7 +1,8 @@
 "use client";
 
 import React from 'react';
-import { BookOpen, GraduationCap, Github, Twitter, Linkedin, Facebook, Mail, Phone, MapPin, Globe, Zap, Shield } from 'lucide-react';
+import { BookOpen, GraduationCap, Mail, Phone, MapPin, Globe, Zap, Shield } from 'lucide-react';
+import { Twitter, Github, Linkedin, Facebook } from './Icons';
 
 interface FooterProps {
   onPageChange?: (pageId: string) => void;

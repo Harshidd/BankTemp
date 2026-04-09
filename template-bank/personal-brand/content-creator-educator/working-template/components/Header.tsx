@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Youtube, Newspaper, BookOpen, MessageCircle } from 'lucide-react';
+import { Menu, X, Newspaper, BookOpen, MessageCircle } from 'lucide-react';
 
 interface HeaderProps {
   currentPage: string;

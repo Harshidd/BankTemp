@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Website Clone",
-  description: "Pixel-perfect website clone",
+  title: "Template Bank | Professional Starter Systems",
+  description: "A curated library of premium, reusable website templates and starter systems for modern web development.",
 };
 
 export default function RootLayout({

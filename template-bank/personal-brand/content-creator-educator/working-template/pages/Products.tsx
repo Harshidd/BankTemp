@@ -86,7 +86,7 @@ export default function Products({ onNavigate }: PageProps) {
                     </div>
                   ))}
                 </div>
-                <button className="w-full py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-emerald-600 transition-all flex items-center justify-center gap-2 group/btn active:scale-95">
+                <button className="w-full py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-emerald-600 transition-colors flex items-center justify-center gap-2 group/btn">
                   Get Instant Access <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
                 </button>
               </div>
@@ -143,7 +143,7 @@ export default function Products({ onNavigate }: PageProps) {
               <div className="bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 text-center">
                 <div className="text-slate-400 text-sm font-bold uppercase mb-2 line-through">$845 Value</div>
                 <div className="text-5xl font-black text-white mb-8">$497</div>
-                <button className="w-full py-5 bg-emerald-600 text-white font-bold rounded-2xl hover:bg-emerald-700 transition-all shadow-xl shadow-emerald-500/20 animate-pulse">
+                <button className="w-full py-4 bg-emerald-600 text-white font-bold rounded-2xl hover:bg-emerald-700 transition-colors shadow-lg">
                   Claim Your Bundle
                 </button>
                 <p className="mt-4 text-xs text-slate-500 italic">Limited time availability. 30-day money back.</p>

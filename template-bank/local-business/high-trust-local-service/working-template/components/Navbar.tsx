@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Clock, MapPin, Menu, X, Sparkles } from 'lucide-react';
+import { Phone, Clock, MapPin, Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   currentPage?: string;
@@ -39,12 +39,6 @@ export default function Navbar({ currentPage = 'home', onPageChange }: NavbarPro
             </div>
          </div>
          <div className="flex items-center gap-4">
-            {/* Subtle MRKDEV Badge */}
-            <div className="px-2 py-0.5 rounded border border-blue-500/30 bg-blue-500/10 text-blue-400 flex items-center gap-1.5 select-none animate-pulse">
-               <Sparkles className="w-2.5 h-2.5" />
-               <span className="text-[9px]">MRKDEV Template</span>
-            </div>
-            <div className="w-px h-3 bg-white/10" />
             <a href="#" className="hover:text-white transition-colors">Careers</a>
          </div>
       </div>
@@ -70,7 +64,7 @@ export default function Navbar({ currentPage = 'home', onPageChange }: NavbarPro
              <button
                key={link.id}
                onClick={() => handleNavClick(link.id)}
-               className={`transition-all hover:scale-110 active:scale-90 ${currentPage === link.id ? 'text-blue-600 underline underline-offset-8 decoration-2' : 'hover:text-slate-950'}`}
+               className={`transition-colors ${currentPage === link.id ? 'text-blue-600 underline underline-offset-8 decoration-2' : 'hover:text-slate-950'}`}
              >
                {link.label}
              </button>

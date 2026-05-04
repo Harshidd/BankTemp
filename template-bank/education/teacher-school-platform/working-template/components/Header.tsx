@@ -29,12 +29,12 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
           className="flex items-center gap-3 cursor-pointer group"
           onClick={() => onNavigate('home')}
         >
-          <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform">
+          <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
             <GraduationCap className="w-6 h-6" />
           </div>
           <div className="flex flex-col leading-none">
             <span className="text-xl font-black text-slate-900 tracking-tighter uppercase italic">EduPlatform</span>
-            <span className="text-[9px] font-bold text-blue-600 tracking-[0.3em] uppercase opacity-60">MRKDEV Template</span>
+            <span className="text-[9px] font-medium text-slate-400 tracking-[0.2em] uppercase">School & Teacher Platform</span>
           </div>
         </div>
 
@@ -54,7 +54,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
           ))}
           <button 
              onClick={() => onNavigate('contact')}
-             className="px-6 py-2.5 rounded-full bg-slate-950 text-white font-black text-[10px] uppercase tracking-widest hover:bg-blue-600 transition-all active:scale-95 shadow-lg shadow-slate-900/10"
+             className="px-6 py-2.5 rounded-full bg-slate-950 text-white font-black text-[10px] uppercase tracking-widest hover:bg-blue-600 transition-colors shadow-lg shadow-slate-900/10"
           >
             Get Started
           </button>

@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           {/* Left Text Column: Trust & Authority */}
           <div className="flex-1 space-y-10 lg:space-y-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-600/10 bg-blue-600/5 text-xs font-bold text-blue-600 uppercase tracking-widest animate-fade-in shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-blue-600/20 bg-blue-50 text-xs font-semibold text-blue-700 uppercase tracking-widest">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
               Trusted Local Professionals
             </div>
@@ -42,16 +42,15 @@ export default function Hero() {
                ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
-              <a 
-                href="tel:0000000000" 
-                className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg transition-all shadow-xl shadow-blue-500/20 hover:scale-105 active:scale-95 flex items-center justify-center gap-3 group"
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+              <a
+                href="tel:0000000000"
+                className="px-7 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2.5 group"
               >
-                <Phone className="w-5 h-5 group-hover:scale-125 transition-transform" />
+                <Phone className="w-4 h-4" />
                 Call Now: (000) 000-0000
               </a>
-              <p className="text-xs text-slate-400 font-bold uppercase tracking-widest hidden sm:block">Or</p>
-              <button className="w-full sm:w-auto px-10 py-5 rounded-2xl border border-slate-900/10 bg-white hover:bg-slate-50 text-slate-950 font-bold text-lg transition-all shadow-lg">
+              <button className="px-7 py-3.5 border border-slate-300 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm transition-colors">
                 View All Services
               </button>
             </div>

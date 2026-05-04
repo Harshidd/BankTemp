@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, Zap, CheckCircle, Info } from 'lucide-react';
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
   const { category: categoryId } = await params;
   const category = TEMPLATE_CATEGORIES.find(c => c.id === categoryId);
-  const categoryTemplates = TEMPLATES.filter(t => t.category === categoryId);
+  const categoryTemplates = TEMPLATES.filter(t => t.category === categoryId && t.status === 'ready');
 
   if (!category) return <div className="min-h-screen bg-white p-24 text-center text-slate-500 font-bold">Category not found.</div>;
 
@@ -28,7 +28,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
              <span className="text-xs font-black uppercase tracking-[0.3em] text-indigo-600">Starter Systems</span>
              <div className="h-px w-8 bg-indigo-100" />
           </div>
-          <h1 className="text-5xl lg:text-8xl font-black tracking-tight text-slate-950 leading-none">{category.name} <br/>Collections.</h1>
+          <h1 className="text-5xl lg:text-6xl font-black tracking-tight text-slate-950 leading-none">{category.name} <br/>Collections.</h1>
           <p className="text-lg lg:text-xl text-slate-500 max-w-2xl leading-relaxed font-medium">
             High-fidelity {category.name} starters engineered for professional performance and rapid foundational customization.
           </p>
@@ -88,7 +88,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               <div className="flex items-center gap-4 isolate">
                   <Link
                     href={`/templates/${categoryId}/${template.id}`}
-                    className="px-10 py-5 rounded-2xl bg-slate-900 text-white font-bold text-xs tracking-widest uppercase hover:bg-indigo-600 shadow-2xl shadow-indigo-900/10 transition-all hover:scale-105 active:scale-95 flex items-center gap-4 group/btn"
+                    className="px-10 py-4 rounded-2xl bg-slate-900 text-white font-bold text-xs tracking-widest uppercase hover:bg-indigo-600 shadow-2xl shadow-indigo-900/10 transition-colors flex items-center gap-4 group/btn"
                   >
                    Preview Starter
                    <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />

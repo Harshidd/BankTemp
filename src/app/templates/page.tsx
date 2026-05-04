@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { TEMPLATE_CATEGORIES, TEMPLATES } from '@/lib/template-registry';
-import { Zap, GraduationCap, User, Briefcase, ShoppingBag, MapPin, ArrowRight } from 'lucide-react';
+import { Zap, GraduationCap, User, Briefcase, ShoppingBag, MapPin, LayoutGrid, ArrowRight } from 'lucide-react';
 
 const icons: { [key: string]: any } = {
   'zap': Zap,
@@ -10,6 +10,7 @@ const icons: { [key: string]: any } = {
   'briefcase': Briefcase,
   'shopping-bag': ShoppingBag,
   'map-pin': MapPin,
+  'layout-grid': LayoutGrid,
 };
 
 export default function TemplatesIndex() {
@@ -28,7 +29,7 @@ export default function TemplatesIndex() {
              <div className="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-xl shadow-slate-900/10">TB</div>
              <span className="text-sm font-black uppercase tracking-widest text-slate-300">by MRKDEV</span>
           </div>
-          <h1 className="text-5xl lg:text-8xl font-black tracking-tight text-slate-950 leading-none">Template Bank</h1>
+          <h1 className="text-5xl lg:text-6xl font-black tracking-tight text-slate-950 leading-none">Template Bank</h1>
           <p className="text-lg lg:text-xl text-slate-500 max-w-2xl leading-relaxed font-medium">
             A curated library of premium website starter systems. Organized by category and engineered for architectural clarity.
           </p>
@@ -44,7 +45,7 @@ export default function TemplatesIndex() {
               <Link
                 key={category.id}
                 href={`/templates/${category.id}`}
-                className="group p-10 rounded-[3rem] border border-slate-100 bg-slate-50 shadow-xl shadow-slate-200/50 hover:bg-white hover:shadow-2xl hover:shadow-indigo-900/5 transition-all duration-500 transform hover:-translate-y-2"
+                className="group p-10 rounded-[3rem] border border-slate-100 bg-slate-50 shadow-xl shadow-slate-200/50 hover:bg-white hover:shadow-2xl hover:shadow-indigo-900/5 transition-all duration-300"
               >
                 <div className="w-16 h-16 rounded-2xl bg-white border border-slate-100 mb-10 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-sm">
                   <Icon className="w-7 h-7 transition-colors" />

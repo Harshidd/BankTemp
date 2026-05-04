@@ -20,7 +20,7 @@ export default function ReviewsPage() {
         <div className="absolute inset-0 opacity-10 pointer-events-none -z-10 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="container mx-auto px-4 text-center">
            <div className="space-y-12">
-              <span className="text-sm font-bold text-blue-500 uppercase tracking-[0.3em] font-mono animate-pulse">Social Proof</span>
+              <span className="text-sm font-bold text-blue-500 uppercase tracking-[0.3em] font-mono">Social Proof</span>
               <h1 className="text-4xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.1]">Trusted by your <br/> <span className="text-blue-600 italic underline decoration-white/10 decoration-4">neighbors.</span></h1>
               <p className="text-lg lg:text-xl text-white/40 max-w-2xl mx-auto font-medium leading-relaxed">Join 10,000+ happy clients who rely on us for professional grade [Niche] solutions every day.</p>
            </div>
@@ -54,7 +54,7 @@ export default function ReviewsPage() {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
              {expandedReviews.map((r, i) => (
-               <div key={i} className="p-8 lg:p-12 rounded-[2.5rem] border border-slate-950/5 bg-white shadow-2xl relative group hover:-translate-y-2 transition-transform cursor-default">
+               <div key={i} className="p-8 lg:p-12 rounded-[2.5rem] border border-slate-950/5 bg-white shadow-xl relative group transition-shadow hover:shadow-2xl cursor-default">
                   <div className="absolute top-0 right-0 p-8 text-slate-100 group-hover:text-blue-100 transition-colors">
                      <Quote className="w-12 h-12 rotate-180 opacity-20" />
                   </div>
@@ -99,8 +99,8 @@ export default function ReviewsPage() {
            
            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100 transition-opacity">
               {[1,2].map(i => (
-                <div key={i} className="aspect-[16/10] rounded-[3rem] bg-slate-100 border border-slate-950/5 group relative overflow-hidden shadow-3xl transform hover:scale-105 transition-transform">
-                   <div className="absolute top-10 left-10 p-3 rounded-xl bg-slate-950 text-white font-bold text-[10px] uppercase tracking-widest shadow-2xl z-10">Before / After</div>
+                <div key={i} className="aspect-[16/10] rounded-[3rem] bg-slate-100 border border-slate-950/5 group relative overflow-hidden shadow-xl transition-shadow hover:shadow-2xl">
+                   <div className="absolute top-10 left-10 p-3 rounded-xl bg-slate-950 text-white font-bold text-[10px] uppercase tracking-widest shadow-lg z-10">Before / After</div>
                    <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
               ))}
@@ -112,10 +112,10 @@ export default function ReviewsPage() {
       <section className="py-24 lg:py-48 px-4 bg-slate-50 text-center relative overflow-hidden">
          <div className="max-w-4xl mx-auto space-y-12">
             <h2 className="text-4xl lg:text-7xl font-extrabold tracking-tight text-slate-950 mb-8 lowercase tracking-tighter">Ready for professional grade <span className="text-blue-600 underline">service?</span></h2>
-            <div className="flex items-center justify-center gap-4 animate-bounce">
+            <div className="flex items-center justify-center gap-4">
                <Clock className="w-12 h-12 text-blue-600 opacity-20" />
             </div>
-            <button className="px-12 py-5 rounded-2xl bg-slate-950 hover:bg-blue-600 text-white font-bold text-lg shadow-2xl transition-all hover:scale-105 active:scale-95 group">
+            <button className="px-10 py-4 rounded-2xl bg-slate-950 hover:bg-blue-600 text-white font-bold text-base shadow-2xl transition-colors group">
               Start Your Service Flow
               <ArrowRight className="w-5 h-5 inline-block ml-3 group-hover:translate-x-1 transition-transform" />
             </button>

@@ -6,14 +6,14 @@ import Link from 'next/link';
 
 export default function MinimalBackLink() {
   return (
-    <div className="fixed top-4 left-4 z-[500] pointer-events-none sm:top-6 sm:left-6 md:top-8 md:left-8 animate-in fade-in slide-in-from-left duration-1000">
-      <Link 
-        href="/templates" 
-        className="pointer-events-auto flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/10 text-white/50 hover:bg-white hover:text-slate-950 transition-all shadow-sm group text-[9px] font-black uppercase tracking-widest"
+    <div className="fixed bottom-6 right-6 z-[500] animate-in fade-in slide-in-from-bottom duration-700">
+      <Link
+        href="/templates"
+        className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/60 text-slate-500 hover:bg-white hover:text-slate-900 hover:border-slate-400 transition-all shadow-lg shadow-black/10 group text-[10px] font-bold uppercase tracking-widest"
       >
-        <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" />
-        <span className="hidden sm:inline-block">Back to Template Bank</span>
-        <span className="sm:hidden">Close Preview</span>
+        <ArrowLeft className="w-3 h-3 group-hover:-translate-x-0.5 transition-transform" />
+        <span className="hidden sm:inline-block">Template Bank</span>
+        <span className="sm:hidden">Back</span>
       </Link>
     </div>
   );

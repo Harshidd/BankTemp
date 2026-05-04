@@ -11,10 +11,9 @@ export default function Hero() {
 
       <div className="container relative mx-auto px-4 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-sm mb-8 animate-fade-in">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-white/10 bg-white/5 text-sm mb-8">
           <span className="w-2 h-2 rounded-full bg-blue-500" />
-          <span className="text-white/70">Announcing our latest integration</span>
-          <ArrowRight className="w-3 h-3 text-white/40" />
+          <span className="text-white/60 text-xs font-medium tracking-wide">Announcing our latest integration</span>
         </div>
 
         {/* Title */}
@@ -29,10 +28,10 @@ export default function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
-          <button className="px-8 py-4 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium transition-all shadow-lg shadow-blue-600/20 hover:scale-105">
+          <button className="px-8 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-colors">
             Get Started for Free
           </button>
-          <button className="px-8 py-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-white font-medium transition-all">
+          <button className="px-8 py-3.5 border border-white/10 bg-white/5 hover:bg-white/10 text-white font-medium text-sm transition-colors">
             See the Demo
           </button>
         </div>

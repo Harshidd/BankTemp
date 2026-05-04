@@ -18,25 +18,16 @@ export default function CTA() {
             </p>
          </div>
 
-         <div className="relative flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button className="px-10 py-5 rounded-2xl bg-white text-black font-bold text-lg hover:bg-white/90 shadow-2xl transition-all hover:scale-105 active:scale-95 flex items-center gap-3 group/btn">
+         <div className="relative flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button className="px-10 py-3.5 bg-white text-black font-semibold text-sm hover:bg-white/90 transition-colors flex items-center gap-3 group/btn">
               Get Started for Free
-              <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
             </button>
-            <button className="px-10 py-5 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 text-white font-bold text-lg transition-all">
+            <button className="px-10 py-3.5 border border-white/10 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition-colors">
               Contact Sales
             </button>
          </div>
 
-         {/* Floating decorative UI elements */}
-         <div className="absolute -left-12 bottom-12 p-3 rounded-xl border border-white/5 bg-white/5 hidden lg:block rotate-6">
-            <div className="w-24 h-2 rounded bg-white/10 mb-2" />
-            <div className="w-16 h-2 rounded bg-white/5" />
-         </div>
-         <div className="absolute -right-12 top-12 p-3 rounded-xl border border-white/5 bg-white/5 hidden lg:block -rotate-12 translate-x-4">
-            <div className="w-32 h-2 rounded bg-white/10 mb-2" />
-            <div className="w-20 h-2 rounded bg-white/5" />
-         </div>
       </div>
     </section>
   );
